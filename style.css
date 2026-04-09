@@ -1,0 +1,760 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --primary: #7A4954;
+    --secondary: #4B2E2B;
+    --background: #F5EFDA;
+    --accent: #DCC7AA;
+    --text: #2B2B2B;
+    --card: #FFFAF1; 
+}
+
+body{
+    background: var(--background);
+    color: var(--text);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    scroll-margin-top: 74px;
+}
+
+.navbar{
+    background-color: var(--primary);
+    padding: 12px 40px;
+    height: 70;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand-name{
+    color: var(--background);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: var(--background);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: var(--accent);
+}
+
+.hero{
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    background-color: var(--background);
+    gap: 40px;
+}
+
+.hero-text{
+    flex: 1;
+}
+
+.hero-text h1{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-text p{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: var(--text);
+    margin-bottom: 30px;
+    max-width: 550px;
+    line-height: 1.7;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 18px;
+}
+
+.btn,
+.btn-outline{
+    display: inline-block;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn{
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.btn:hover{
+    background-color: var(--secondary);
+}
+
+.btn-outline{
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+}
+
+.btn-outline:hover{
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.hero-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img{
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.about{
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 0 80px;
+    background-color: var(--card);
+}
+
+.about-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img{
+    width: 100%;
+    max-width: 450px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.about-text{
+    flex: 1;
+    max-width: 580px;
+}
+
+.section-subtitle{
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about-text h2{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 56px;
+    line-height: 1.1;
+    color: var(--secondary);
+    margin-bottom: 24px;
+}
+
+.about-text p{
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.menu {
+  min-height: 90vh;
+  padding: 90px 80px;
+  background-color: var(--background);
+  text-align: center;
+}
+
+.menu-header {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.menu-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 56px;
+  color: var(--secondary);
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.menu-header p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.menu-card {
+  background-color: var(--card);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+
+.menu-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.menu-card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.menu-card span {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.gallery {
+  min-height: 90vh;
+  padding: 90px 80px;
+  background-color: var(--card);
+}
+
+.gallery-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.gallery-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 56px;
+  color: var(--secondary);
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.gallery-header p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 24px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.gallery-item.large {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.gallery-item.wide-right {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.contact {
+  min-height: 90vh;
+  padding: 90px 80px;
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.contact-text,
+.contact-form {
+  flex: 1;
+}
+
+.contact-text {
+  max-width: 560px;
+}
+
+.contact-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 56px;
+  line-height: 1.1;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.contact-info {
+  margin-top: 24px;
+}
+
+.contact-info p strong {
+  color: var(--primary);
+}
+
+.contact-form form {
+  background-color: var(--card);
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  background-color: #fff;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+}
+
+.contact-form .btn {
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 70px 80px 25px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.footer-brand,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-brand h3,
+.footer-links h4,
+.footer-contact h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  margin-bottom: 18px;
+  color: var(--background);
+}
+
+.footer-brand p,
+.footer-contact p,
+.footer-links a,
+.footer-bottom p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--background);
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(245, 239, 218, 0.25);
+  padding-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 16px 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero,
+  .about,
+  .contact {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+  }
+
+  .hero-text,
+  .about-text,
+  .contact-text {
+    max-width: 100%;
+  }
+
+  .hero-text p,
+  .about-text p,
+  .contact-text p {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img,
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 220px;
+  }
+
+  .gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .gallery-item.wide-right {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 14px 18px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand-name {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .hero,
+  .about,
+  .menu,
+  .gallery,
+  .contact,
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero-text h1,
+  .about-text h2,
+  .menu-header h2,
+  .gallery-header h2,
+  .contact-text h2 {
+    font-size: 38px;
+  }
+
+  .hero-text p,
+  .about-text p,
+  .menu-header p,
+  .gallery-header p,
+  .contact-text p {
+    font-size: 15px;
+  }
+
+  .btn,
+  .btn-outline {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .gallery-item.large,
+  .gallery-item.wide-right {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+  .contact-form form {
+    padding: 24px;
+  }
+
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  #home,
+  #about,
+  #menu,
+  #gallery,
+  #contact {
+    scroll-margin-top: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  #home,
+  #about,
+  #menu,
+  #gallery,
+  #contact {
+    scroll-margin-top: 118px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-links a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.brand img {
+  transition: transform 0.3s ease;
+}
+
+.brand img:hover {
+  transform: scale(1.08);
+}
+
+.brand-name {
+  transition: color 0.3s ease;
+}
+
+.brand-name:hover {
+  color: var(--accent);
+}
+
+.btn,
+.btn-outline {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.menu-card,
+.gallery-item,
+.contact-form form {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover,
+.gallery-item:hover,
+.contact-form form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
